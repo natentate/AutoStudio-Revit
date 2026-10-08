@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+    <title>AutoStudio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="titlebar">
+        <div class="qat" id="qat"></div>
+        <div class="title" id="doc-title">AutoStudio</div>
+        <div class="qat-right"><span class="brand">AutoStudio</span></div>
+      </header>
+      <nav id="ribbon">
+        <div class="ribbon-tabs" id="ribbon-tabs" role="tablist"></div>
+        <div class="ribbon-panels" id="ribbon-panels"></div>
+      </nav>
+      <div id="optionsbar"></div>
+      <main id="workspace">
+        <aside id="sidebar">
+          <section class="palette" id="properties-palette">
+            <h2>Properties</h2>
+            <div id="properties"></div>
+          </section>
+          <section class="palette" id="browser-palette">
+            <h2>Project Browser</h2>
+            <div id="browser"></div>
+          </section>
+        </aside>
+        <section id="viewarea">
+          <div id="viewtabs" role="tablist"></div>
+          <div id="viewhost"></div>
+          <div id="viewbar"></div>
+        </section>
+      </main>
+      <footer id="statusbar">
+        <span id="status-prompt">Ready</span>
+        <span id="status-right"><span id="status-coords"></span><span id="status-sel"></span></span>
+      </footer>
+    </div>
+    <div id="modal-root"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
